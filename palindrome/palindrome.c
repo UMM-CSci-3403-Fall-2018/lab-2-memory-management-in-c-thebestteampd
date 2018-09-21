@@ -35,10 +35,16 @@ char *palindrome(char const *str) {
   free(rev);
 
   if (result) {
-    answer = "Yes";
- 
+    answer = (char*) calloc(4, sizeof(char));
+    answer[0] = 'Y';
+    answer[1] = 'e';
+    answer[2] = 's';
+    answer[3] = '\0';
   } else {
-    answer = "No";
+    answer = (char*) calloc(3, sizeof(char));
+    answer[0] = 'N';
+    answer[1] = 'o';
+    answer[2] = '\0';
   }
 
   return answer;
