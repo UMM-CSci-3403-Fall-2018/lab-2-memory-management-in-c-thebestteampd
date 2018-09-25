@@ -13,4 +13,6 @@ int main(int argc, char *argv[]) {
   while (getline(&line, &size, stdin) > 0) {
     printf("%s\n", disemvowel(line));
   }
+  // added free(line) to free memory occupied by malloc.
+  free(line);
 }
