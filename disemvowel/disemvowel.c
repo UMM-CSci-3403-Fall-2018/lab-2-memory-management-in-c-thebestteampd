@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <string.h>
 
 #include "disemvowel.h"
 
@@ -25,11 +26,9 @@ int check_vowel(char c) {
 char *disemvowel(char *str) {
   char *modline;
   int i, j = 0;
-  size_t size;
 
   // creating an target char sequence as output
-  size = 100;
-  modline = (char*) malloc(sizeof(size + 1));
+  modline = (char*) calloc((strlen(str) + 1), sizeof (modline));
   for (i = 0; str[i] !='\0'; i++) {
     if (check_vowel(str[i]) == 0) {
       modline[j] = str[i];
