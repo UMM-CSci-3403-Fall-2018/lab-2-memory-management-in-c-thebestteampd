@@ -32,6 +32,7 @@ char *palindrome(char const *str) {
     }
     ++i;
   }
+  // free rev after assinged it to result
   free(rev);
 
   if (result) {
